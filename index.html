@@ -110,26 +110,24 @@ a:hover, a:active    { color: #111113; }
 var $=function(id) { return document.getElementById(id); };
 
 var help="<ul> \
-    <li><b>!g</b> = Search Google (Default)</li> \
-    <li><b>!i</b> = Search Google Images</li> \
-    <li><b>!m</b> = Search IMDb</li> \
-    <li><b>!u</b> = Search Urban Dictionary</li> \
-    <li><b>!a</b> = Search Amazon.co.uk</li> \
-	<li><b>!b</b> = Search BluRay</li> \
-	<li><b>!d</b> = Search DVD</li> \
-    <li><b>!y</b> = Search YouTube</li> \
+    <li><b>--i</b> = Search Google Images</li> \
+    <li><b>--y</b> = Search YouTube</li> \
+    <li><b>--u</b> = Search Urban Dictionary</li> \
+    <li><b>--a</b> = Search Amazon.es</li> \
+    <li><b>--k</b> = Search Amazon.co.uk</li> \
+	<li><b>--b</b> = Search BluRay</li> \
+	<li><b>--d</b> = Search DVD</li> \
 </ul>";
 
 var search=[                                                                                                                            // Search engines
     ["",    "https://www.google.com/#q="],                                                                                              // Google (Default)
-    ["!g",  "https://www.google.com/#q="],                                                                                              // Google
-    ["!i",  "https://www.google.com/search?tbm=isch&q="],                                                                               // Google Images
-    ["!m",  "http://www.imdb.com/find?q="],                                                                                             // IMDb
-    ["!u",  "http://www.urbandictionary.com/define.php?term="],                                                                         // Urban Dictionary
-    ["!a",  "https://www.amazon.co.uk/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords="],                                      // Amazon.co.uk
-	["!b",	"http://www.blu-ray.com/search/?quicksearch=1&quicksearch_country=all&section=bluraymovies&quicksearch_keyword=",],			// BluRay
-	["!d",	"http://www.blu-ray.com/search/?quicksearch=1&quicksearch_country=all&section=dvdmovies&quicksearch_keyword=",],			// DVD
-    ["!y",  "https://www.youtube.com/results?search_query="],                                                                           // YouTube
+    ["--i",  "https://www.google.com/search?tbm=isch&q="],                                                                              // Google Images
+    ["--y",  "https://www.youtube.com/results?search_query="],                                                                          // YouTube
+    ["--u",  "http://www.urbandictionary.com/define.php?term="],                                                                        // Urban Dictionary
+    ["--a",  "https://www.amazon.es/s?k="],                                                                                             // Amazon.es
+    ["--k",  "https://www.amazon.co.uk/s?k="],                                                                                          // Amazon.co.uk
+	["--b",	"http://www.blu-ray.com/search/?quicksearch=1&quicksearch_country=all&section=bluraymovies&quicksearch_keyword=",],			// BluRay
+	["--d",	"http://www.blu-ray.com/search/?quicksearch=1&quicksearch_country=all&section=dvdmovies&quicksearch_keyword=",],			// DVD
 ];
 
 var menu=[                                                          // Menu titles
@@ -249,11 +247,11 @@ function handleQuery(e,q) { // Handle search query
     var key=e.keyCode || e.which;
 
     if(key==13) { // Enter
-        var x=q.lastIndexOf("!");
+        var x=q.lastIndexOf("--");
 
-        if(x!=-1 && x>=q.length-2) {
+        if(x!=-1 && x>=q.length-3) {
             for(i=0;i<search.length;i++) {
-                if(search[i][0]==q.substr(x)) { // Find "*!i"
+                if(search[i][0]==q.substr(x)) { // Find "*--i"
                     window.location=search[i][1]+q.substr(0,x).replace(/&/g,"%26");
                     return true;
                 }
@@ -314,7 +312,7 @@ function preview(c,x) {
             <ul id="mnu"></ul>
         </div>
         <br />
-        <input type="text" id="q" value="" placeholder="Search..." onkeypress="javascript:handleQuery(event,this.value);" onfocus="this.value=this.value" />
+        <input type="text" id="q" value="" placeholder="Search..." autocomplete="off" onkeypress="javascript:handleQuery(event,this.value);" onfocus="this.value=this.value" />
         <br /><br />
         <div id="more">
             <input type="button" id="plus" value="+" onclick="javascript:toggleNote();" />
