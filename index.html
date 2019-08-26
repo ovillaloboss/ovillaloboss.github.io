@@ -320,22 +320,21 @@ function preview(c,x) {
 </head>
 <body onload="javascript:init();">
 <div id="overlay"></div>
-<div id="center">
-    <div id="content">
-        <div id="menu">
-            <ul id="mnu"></ul>
-        </div>
-        <br />
-        <input type="text" id="q" value="" placeholder="Search..." autocomplete="off" onkeypress="javascript:handleQuery(event,this.value);" onfocus="this.value=this.value" />
-        <br /><br />
-        <div id="more">
-            <input type="button" id="plus" value="+" onclick="javascript:toggleNote();" />
+    <div id="center">
+        <div id="content">
+            <div id="menu">
+                <ul id="mnu"></ul>
+            </div>
             <br />
-            <div id="help"></div>
+            <input type="text" id="q" value="" placeholder="Search..." autocomplete="off" onkeypress="javascript:handleQuery(event,this.value);" onfocus="this.value=this.value" />
+            <br /><br />
+            <div id="more">
+                <input type="button" id="plus" value="+" onclick="javascript:toggleNote();" />
+                <br />
+                <div id="help"></div>
+            </div>
         </div>
-    </div>
-</div>
-        
+    </div> 
     </div>
 </div>
 </body>
