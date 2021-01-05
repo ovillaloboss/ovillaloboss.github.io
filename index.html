@@ -27,7 +27,7 @@
 */
 html,body {
     margin: 0; padding: 0; overflow: hidden;
-    width: 100%; height: 100%;
+    width: 100%; height: 100%; top: 20%;
     font-family: "Droid Sans", "Liberation Sans", "DejaVu Sans", "Segoe UI", Sans; font-size: 10pt;
     background: #0e0e0e;
 }
@@ -39,22 +39,20 @@ a, a:link, a:visited { color: #CECFD1; text-decoration: none; transition: .2s ea
 a:hover, a:active    { color: #111113; }
 
 #preview { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
-/*#overlay {
+#overlay {
     position: absolute; top: 0; left: 0;
     width: 100%; height: 100%; z-index: 2;
     opacity: 1; transition: .5s;
     background: #17181A;
     /* Uncomment below and disable 'showPreview' in the javascript to use custom background image */
-    /*
-    background: url('file:///home/guest/lewd-twily.jpg') no-repeat center center fixed;
-    background-size: cover; opacity: .25;
-    /**/
-/*}*/
+    background: url('ov.svg') no-repeat center center fixed;
+    background-size: 500px; opacity: .25;
+}
 
 #center { position: relative; width: 100%; height: 100%; }
 #center #content {
-    margin: 0; overflow: visible; width: 100%; height: auto;
-    position: absolute; top: 50%; transform: translate(0,-50%);
+    margin: 0; overflow: visible; width: 50%; height: auto;
+    position: absolute; top: 60%; transform: translate(0,-50%); left: 25%; border-radius: 100px;
     text-align: center; opacity: 1; z-index: 10; background: #17181A; /* #17181A || transparent */
 }
 
@@ -152,8 +150,8 @@ var menu=[  // Menu titles
     "Other",    // mnu_4
 	];
 
-var showFavicon = true;                                             // Enable/Disable Link Favicons (img)
-var showPreview = false;                                            // Enable/Disable Link Hover Preview (iframe)
+var showFavicon = true;     // Enable/Disable Link Favicons (img)
+var showPreview = false;    // Enable/Disable Link Hover Preview (iframe)
 
 // Link setup (separate with ["", "", ""],)
 // Format: ["Name", "URL", "Custom Favicon"],
