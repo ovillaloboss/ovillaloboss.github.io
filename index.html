@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <!--
-
-    Author:        Twily                                        2015
+    Template Author:    Twily   2015
     Website:       http://twily.info/
-    Compatibility: Mozilla Firefox, Internet Explorer, Google Chrome
-
-    Search Usage:  "artist!i" will find images for "artist"
-
 -->
 <html>
 <head>
@@ -54,7 +49,7 @@ a:hover, a:active    { color: #111113; }
     background: url('file:///home/guest/lewd-twily.jpg') no-repeat center center fixed;
     background-size: cover; opacity: .25;
     /**/
-}
+/*}*/
 
 #center { position: relative; width: 100%; height: 100%; }
 #center #content {
@@ -115,10 +110,10 @@ a:hover, a:active    { color: #111113; }
     #menu ul ul li { background: #27282B; border-radius: 1px; height: 32px; text-align: left; width: 200px; /* menu width */ }
 
     /* Menu Colors */
-    #menu ul #mnu_1 li:hover { background: #D54A56; }
-    #menu ul #mnu_2 li:hover { background: #84BD3F; }
-    #menu ul #mnu_3 li:hover { background: #D753A4; }
-    #menu ul #mnu_4 li:hover { background: #6F67E6; }
+    #menu ul #mnu_1 li:hover { background: #66bb6a; }
+    #menu ul #mnu_2 li:hover { background: #42a5f5; }
+    #menu ul #mnu_3 li:hover { background: #ef5350; }
+    #menu ul #mnu_4 li:hover { background: #ffee58; }
 
     #menu img { position: relative; top: 3px; left: -3px; width: 16px; height: 16px; visibility: hidden; }
 </style>
@@ -150,11 +145,11 @@ var search=[                                                                    
     ["!c",  "http://www.comicextra.com/comic-search?key="],                                                                             // Comics
 ];
 
-var menu=[                                                          // Menu titles
-    "Design",                                                        // mnu_1
-    "Code",                                                     // mnu_2
-    "Social",                                                // mnu_3
-    "Other",                                                        // mnu_4
+var menu=[  // Menu titles
+    "Design",   // mnu_1
+    "Code",     // mnu_2
+    "Social",   // mnu_3
+    "Other",    // mnu_4
 	];
 
 var showFavicon = true;                                             // Enable/Disable Link Favicons (img)
@@ -164,20 +159,22 @@ var showPreview = false;                                            // Enable/Di
 // Format: ["Name", "URL", "Custom Favicon"],
 var links=[
     
-    // Design -           mnu_1
+    // Design - mnu_1
     ["Game Ui Database",                "https://www.gameuidatabase.com/",                  "https://www.gameuidatabase.com/icon.svg"],
     ["Interface in Game",               "https://interfaceingame.com/",                     "https://interfaceingame.com/wp-content/uploads/cropped-favicon_interfaceingame-32x32.png"],
     ["Every single Frame",              "https://www.everysingleframe.com/",                "https://www.everysingleframe.com/favicon.ico"],
     ["Animation Screen Caps",           "https://animationscreencaps.com/",                 "https://animationscreencaps.com/favicon.ico"],
     ["Game Design Articles",            "https://docs.google.com/spreadsheets/d/111CjuVYCRUrz0eDFyPorK1ZCnEPeyq5OINnuuwi7RqI/edit#gid=0",                     "https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png"],
     ["Character Design References",     "https://characterdesignreferences.com/",           "https://images.squarespace-cdn.com/content/54fc8146e4b02a22841f4df7/1430550733626-TGNKR7YVPP5H2HOC14DK/LogoChallenge+Boardprovaccia6.jpg?format=100w&content-type=image%2Fjpeg"],
-    ["Game Design Documents",           "https://www.reddit.com/r/gamedesign/comments/7ze7xq/finished_game_design_document_examples/",                     "https://www.reddit.com/favicon.ico"],
+    ["Game Design Documents",           "https://www.reddit.com/r/gamedesign/comments/7ze7xq/finished_game_design_document_examples/",                      "https://www.reddit.com/favicon.ico"],
     ["Awwwards",                        "https://www.awwwards.com/websites/",               "https://www.awwwards.com/favicon.ico"],
     ["NoClip",                          "https://noclip.website/",                          "https://noclip.website/logo-40496a2270a69fdcb86b.png"],
+    ["DeVuego Database",                "https://www.devuego.es/bd/",                       "https://www.devuego.es/blog/wp-content/uploads/2016/09/cropped-iconotwitterdevuego2-450x450.jpg"],
+    ["DeVuego Press Database",          "https://www.devuego.es/pres/",                     "https://www.devuego.es/blog/wp-content/uploads/2016/09/cropped-iconotwitterdevuego2-450x450.jpg"],
 
     ["", "", ""],
 
-    // Code -          mnu_2
+    // Code - mnu_2
     ["Clockify",                        "https://clockify.me/",                             "https://clockify.me/favicon.ico"],
     ["Notion",                          "https://www.notion.so/",                           "https://www.notion.so/images/logo-ios.png"],
     ["Codecademy",                      "https://www.codecademy.com/",                      "https://www.codecademy.com/favicon.ico"],
@@ -190,7 +187,7 @@ var links=[
 
     ["", "", ""],
 
-    // Social -  mnu_3
+    // Social - mnu_3
     ["Linkedin",                        "https://www.linkedin.com/",                        "https://www.linkedin.com/favicon.ico"],
     ["reddit",                          "https://www.reddit.com/",                          "https://www.reddit.com/favicon.ico"],
     ["Userbenchmark",                   "https://www.userbenchmark.com/",                   "https://www.userbenchmark.com/favicon.ico"],
@@ -204,7 +201,7 @@ var links=[
 
     ["", "", ""],
 
-    // Other -          mnu_4
+    // Other - mnu_4
     ["Typing.io",                       "https://typing.io/",                               "https://typing.io/favicon.ico"],
     ["keybr",                           "https://www.keybr.com/",                           "https://www.keybr.com/favicon.ico"],
     ["typing",                          "https://www.typing.com/",                          "https://www.typing.com/favicon.ico"],
@@ -213,7 +210,7 @@ var links=[
     ["Netflix",                         "https://www.netflix.com/",                         "https://www.netflix.com/favicon.ico"],
     ["PrimeVideo",                      "https://www.primevideo.com/",                      "https://www.primevideo.com/favicon.ico"],
     ["DisneyPlus",                      "https://www.disneyplus.com/es-es/home",            "https://www.disneyplus.com/favicon.ico"],
-];      
+];
 
 var i,ss="";
 function init() {
