@@ -107,13 +107,18 @@ a:hover, a:active    { color: #111113; }
     #menu ul li:hover > ul { bottom: 100%; visibility: visible; opacity: 1; z-index: 12; height: calc(32px * 3); /* rows */ }
     #menu ul ul li { background: #27282B; border-radius: 1px; height: 32px; text-align: left; width: 200px; /* menu width */ }
 
-    /* Menu Colors */
-    #menu ul #mnu_1 li:hover { background: #66bb6a; }
-    #menu ul #mnu_2 li:hover { background: #42a5f5; }
-    #menu ul #mnu_3 li:hover { background: #ef5350; }
-    #menu ul #mnu_4 li:hover { background: #ffee58; }
+    /* Menu Colors */   
+    #menu ul #mnu_1 li:hover { background: #66bb6ab7; }
+    #menu ul #mnu_2 li:hover { background: #42a5f5b7; }
+    #menu ul #mnu_3 li:hover { background: #ef5350b7; }
+    #menu ul #mnu_4 li:hover { background: #ffee58b7; }
 
     #menu img { position: relative; top: 3px; left: -3px; width: 16px; height: 16px; visibility: hidden; }
+
+    #menu li:nth-child(1) { color: #66bb6ab7; }
+    #menu li:nth-child(2) { color: #42a5f5b7; }
+    #menu li:nth-child(3) { color: #ef5350b7; }
+    #menu li:nth-child(4) { color: #ffee58b7; }
 </style>
 <script type="text/javascript" language="javascript">
 var $=function(id) { return document.getElementById(id); };
@@ -331,7 +336,7 @@ function preview(c,x) {
             <ul id="mnu"></ul>
         </div>
         <br />
-        <input type="text" id="q" value="" placeholder="Search..." onkeypress="javascript:handleQuery(event,this.value);" onfocus="this.value=this.value" />
+        <input type="text" autocomplete="off" id="q" value="" placeholder="Search..." onkeypress="javascript:handleQuery(event,this.value);" onfocus="this.value=this.value" />
         <br /><br />
         <div id="more">
             <input type="button" id="plus" value="+" onclick="javascript:toggleNote();" />
